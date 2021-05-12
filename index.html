@@ -31,7 +31,13 @@
     font-weight: 400;
     margin-bottom: 30px;
   } 
-
+  .card {
+  float: right;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
   .jumbotron {
     background-color: #000000;
     color: #fff;
@@ -230,34 +236,18 @@
       <p>I am 25 years old and a graduate of Middle Tennessee State Univeristy. I received my Bachelor of Science in Healthcare Management in 2018. <br> <br>Since then, I have worked within the healthcare sector primarly in mental health. I am currently working in addiction medicine advancing the cause against the opioid crisis. I enrolled in Vanderbilt University's Full-Stack Web Development bootcamp to advance my knowledge and acquire a skill that is in demand. I am eager to put the skills I have learned, and will continue to learn to the test within a team. In my free time I enjoy working out, playing music, and spending time with my newborn son, Noah. I am a self taught guitarist and enjoy practicing whenever I get the chance.</p>
     </div>
 
-    <div class="col-sm-4">
-      <span class=""></span>
-      <img src="./assets/images/me.jpg" class="img-circle person floatRight" width="300" height="400">
-    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+  <img src="./assets/images/me.jpg" class="img-rounded person floatRight" alt="Sean" width="300" height="400">
+  <h1>Sean Johnson</h1>
+  <p class="title">Web Developer</p>
+  <a href="https://twitter.com/seanjohnson___" target="_blank"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.linkedin.com/in/sean-johnson-/" target="_blank"><i class="fa fa-linkedin"></i></a>
+  <a href="https://www.instagram.com/sean___johnson/" target="_blank"><i class="fa fa-instagram"></i></a>
+</div>
   </div>
 </div>
-
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class=" "></span>
-      <a target="_blank" href="https://www.linkedin.com/in/sean-johnson-/">
-        <img src="./assets/images/linkedin.png">
-       </a>
-    </div>
-
-
-    <div class="col-sm-4">
-      <div class="row">
-      <a target="_blank" href="https://www.instagram.com/sean___johnson/">
-        <img src="./assets/images/instagram.png" width="250">
-       </a>
-    </div>
-
-  </div>       
-  </div>
-</div>
-<br> 
 
 <!-- Container (projects Section) -->
 <div id="projects" class="container-fluid text-center bg-grey">
@@ -359,7 +349,7 @@
     
   </div><br>
   
-
+<!-- Carousel Start -->
   <h2>What Clients Say</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
@@ -434,6 +424,8 @@
 
 <!-- JS -->
 <script>
+window.alert("A work in progress");
+
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
