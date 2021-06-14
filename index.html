@@ -42,13 +42,17 @@
   margin: auto;
   text-align: center;
 }
-  .jumbotron {
+.jumbotron {
     background-image: url("./assets/images/nash\ skyline\ 4.jpg");
     background-size: cover;
     position: relative;
     color: #ffffff;
     padding: 100px 25px;
     font-family: 'Beth Ellen';font-size: 25px;
+  }
+  .col-sm-8 {
+  
+   color: #000000;
   }
   .container-fluid {
     padding: 60px 50px;
@@ -242,10 +246,11 @@
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2></h2><br>
-      <p>I am 25 years old and a graduate of Middle Tennessee State Univeristy. I received my Bachelor of Science in Healthcare Management in 2018. Since then I have worked within the healthcare sector.<br><br>I am a music fanatic and self taught guitarist. In my second life I will probably be a musician. Until that time comes, I am happily developing websites and constantly expanding my discovery of  artist. In an effort to showcase some of these artist, I include videos on my page to some of their songs. I update these videos weekly and I hope you discover some new artist through it. Thanks for showing love to my page and I hope you like it.<br><br>xLorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis quisquam sed similique saepe facilis ratione, nam, perferendis dicta quidem ipsam adipisci assumenda illo maxime sunt nihil provident, sint id necessitatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ut dolor corporis laboriosam alias, repellendus dignissimos illum molestias animi beatae sequi vero reprehenderit maxime eveniet ab voluptatum at similique sed. </p>
+      <button style="color: #000000;" onclick="typeWriter()">ABOUT</button>
+    
+      <p id="demo"></p>
     </div>
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Profile card -->
@@ -265,20 +270,20 @@
 <!-- YOUTUBE VIDS -->
 <div id="music" class="container-fluid bg-3">
   <h2>Artist of the Week</h2>
-  <h3>SHAKEY GRAVES</h3>
+  <h3>Benjamin Tod</h3>
   <br>
 <div class="vimeo-wrapper">
 
   <div class="col-sm-4">
-  <iframe width="300" height="315" src="https://www.youtube.com/embed/hLV09_FDnIQ" frameborder="0" allowfullscreen></iframe>
+  <iframe width="300" height="315" src="https://www.youtube.com/embed/gRwIC0fJW5Y" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div class="col-sm-4">
-  <iframe width="300" height="315" src="https://www.youtube.com/embed/eUkSTnUK_T0" frameborder="0" allowfullscreen></iframe>
+  <iframe width="300" height="315" src="https://www.youtube.com/embed/-qwRjPpHFbg" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div class="col-sm-4">
-    <iframe width="300" height="315" src="https://www.youtube.com/embed/sD72LbIk02M" frameborder="0" allowfullscreen></iframe>
+    <iframe width="300" height="315" src="https://www.youtube.com/embed/st-CkCeqMO0" frameborder="0" allowfullscreen></iframe>
     </div>
 
   </div>
@@ -462,6 +467,19 @@
 <!-- JS -->
 <script>
 window.alert("A work in progress");
+
+var i = 0;
+var txt = 'I am 25 years old and a graduate of Middle Tennessee State Univeristy. I received my Bachelor of Science in Healthcare Management in 2018. Since then I have worked within the healthcare sector. I am a music fanatic and self taught guitarist. In my second life I will probably be a musician. Until that time comes, I am happily developing websites and constantly expanding my discovery of  artist. In an effort to showcase some of these artist, I include videos on my page to some of their songs. I update these videos weekly and I hope you discover some new artist through it. Thanks for showing love to my page and I hope you like it.'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
 
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
